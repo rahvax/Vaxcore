@@ -25,3 +25,14 @@ void logMessage(const int enumType, const char *message, ...){
 
   putchar('\n');
 }
+
+int checkFile(const char *filepath) {
+  FILE *fp;
+  if (!(fp = fopen(filepath, "r"))) {
+    logMessage(Error, "arquivo %s não encontrado", filepath);
+    return -1;
+  }
+  logMessage(Sucess, "arquivo %s encontrado", filepath);
+  fclose(fp);
+  return 0;
+}

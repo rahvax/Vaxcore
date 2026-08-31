@@ -22,5 +22,8 @@ enum vx_logTypes {
    A função vai usar variadico para formatar
    o buffer "message" */
 void logMessage(const int enumType, const char *message, ...);
-
+/* Verificar se um arquivo existe
+   Vai retornar 0 para sucesso e
+   -1 para erros */
+int checkFile(const char *filepath);
 #endif
