@@ -8,6 +8,9 @@
 #ifndef _VAXCORE_H
 #define _VAXCORE_H
 
+/* Enumerador temporario
+   Os retornos padronizados
+   para a função de mensagem */
 enum vx_logTypes {
   Sucess,
   Warning,
