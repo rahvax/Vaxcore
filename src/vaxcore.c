@@ -19,7 +19,6 @@ void logMessage(const int enumType, const char *message, ...){
       printf("[Log]: ");
   }
   
-  printf("[Teste]: ");
   va_start(args, message);
   vprintf(message, args);
   va_end(args);
