@@ -1,0 +1,4 @@
+*.tmp
+*.vax
+*.org
+build/
