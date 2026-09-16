@@ -5,3 +5,4 @@ Para resolver isso resolvi começar esse projeto com a finalidade de tornar essa
 
 ## Vídeos
 - [PT 01 | Esqueleto](https://www.youtube.com/watch?v=FJwI0W_GMQ4)
+- [PT 02 | WriteFile & ReadFile](https://www.youtube.com/watch?v=Uf8soQOc7kc)
