@@ -26,4 +26,10 @@ void logMessage(const int enumType, const char *message, ...);
    Vai retornar 0 para sucesso e
    -1 para erros */
 int checkFile(const char *filepath);
+/* Registrar uma string dentro de um arquivo
+   Retorna 0 para sucesso e -1 para erros */
+int registerFile (const char *filepath, const char *buffer);
+/* Criar e/ou escrever dentro de um arquivo
+   Retorna 0 para sucesso e -1 para erros */
+int writeFile(const char *filepath, const char *buffer);
 #endif

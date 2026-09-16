@@ -36,3 +36,27 @@ int checkFile(const char *filepath) {
   fclose(fp);
   return 0;
 }
+
+int registerFile (const char *filepath, const char *buffer) {
+  FILE *fp;
+  if (!(fp = fopen(filepath, "a"))) {
+    logMessage(Error, "não foi possível criar ou escrever no arquivo.");
+    return Error;
+  }
+
+  fprintf(fp, "[LOG]: %s\n", buffer);
+  fclose(fp);
+  return Sucess;
+}
+
+int writeFile(const char *filepath, const char *buffer) {
+  FILE *fp;
+  if (!(fp = fopen(filepath, "w"))) {
+    logMessage(Error, "não foi possível criar ou escrever no arquivo.");
+    return Error;
+  }
+
+  fputs(buffer, fp);
+  fclose(fp);
+  return Sucess;
+}
