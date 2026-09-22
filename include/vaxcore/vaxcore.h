@@ -14,6 +14,7 @@
 enum vx_logTypes {
   Sucess,
   Warning,
+  Debug,
 
   Error = -1
 };
@@ -32,4 +33,7 @@ int registerFile (const char *filepath, const char *buffer);
 /* Criar e/ou escrever dentro de um arquivo
    Retorna 0 para sucesso e -1 para erros */
 int writeFile(const char *filepath, const char *buffer);
+/* Retornar o "tamanho" de um arquivo
+   Retorna -1 para erros */
+long sizeFile(const char *filepath);
 #endif

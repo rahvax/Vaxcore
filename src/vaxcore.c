@@ -15,6 +15,9 @@ void logMessage(const int enumType, const char *message, ...){
     case Error:
       printf("[X]: ");
       break;
+    case Debug:
+      printf("[@]: ");
+      break;
     default:
       printf("[Log]: ");
   }
@@ -59,4 +62,26 @@ int writeFile(const char *filepath, const char *buffer) {
   fputs(buffer, fp);
   fclose(fp);
   return Sucess;
+}
+
+long sizeFile(const char *filepath) {
+  FILE *fp;
+  long int size;
+  
+  if (!(fp = fopen(filepath, "r"))) {
+    logMessage(Error, "erro na leitura do arquivo");
+    return Error;
+  }
+
+  if (fseek(fp, 0L, SEEK_END) != 0) {
+    logMessage(Error, "não foi possível localizar a posição final");
+    return Error;
+  }
+
+  if (!(size = ftell(fp))) {
+    logMessage(Error, "não foi possível capturar a posição");
+    return Error;
+  }
+
+  return size;
 }
